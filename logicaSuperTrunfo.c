@@ -11,7 +11,6 @@ int main() {
     int populacao1, populacao2;
     int pontosT1, pontosT2;
     float area1, area2, pib1, pib2;
-
     
     // Área para entrada de dados
     // Primeira carta
@@ -54,35 +53,24 @@ int main() {
     float densidade1 = (float) populacao1 / area1; 
     float densidade2 = (float) populacao2 / area2;
 
-    float densidadeInverso1 = area1 / (float) populacao1; 
-    float densidadeInverso2 = area2 / (float) populacao2;
-
     float pcapita1 = (float) pib1 / populacao1;
     float pcapita2 = (float) pib2 / populacao2;
 
-    // Cálculo para o SUPERPOWERRRR
-    // somando todos os atributos numéricos 
-    // (população, área, PIB, número de pontos turísticos, PIB per capita e o inverso da densidade populacional)
-    float superPoder1 = (float) populacao1 + area1 + pib1 + (float) pontosT1 + pcapita1 + densidadeInverso1;
-    float superPoder2 = (float) populacao2 + area2 + pib2 + (float) pontosT2 + pcapita2 + densidadeInverso2;
-
     // Comparação de Cartas:
-    // Desenvolva a lógica de comparação entre duas cartas.
-    // Utilize estruturas de decisão como if, if-else para comparar atributos como população, área, PIB, etc.
+    // lógica de comparação entre duas cartas.
+    printf("--------- X Combate X ---------\n");
 
-    // Exemplo:
-    // if (populacaoA > populacaoB) {
-    //     printf("Cidade 1 tem maior população.\n");
-    // } else {
-    //     printf("Cidade 2 tem maior população.\n");
-    // }
-
-    // Exibição dos Resultados:
-    // Após realizar as comparações, exiba os resultados para o usuário.
-    // Certifique-se de que o sistema mostre claramente qual carta venceu e com base em qual atributo.
-
-    // Exemplo:
-    // printf("A cidade vencedora é: %s\n", cidadeVencedora);
+    if (populacao1 > populacao2) {
+        printf("Atributo - POPULAÇÃO\n");
+        printf("Carta 1 - %s - %d\n", cidade1, populacao1);
+        printf("Carta 2 - %s - %d\n", cidade2, populacao2);
+        printf("Resultado: Carta 1 (%s) venceu!\n", cidade1);
+    } else {
+        printf("Atributo - POPULAÇÃO\n");
+        printf("Carta 2 - %s - %d\n", cidade2, populacao2);
+        printf("Carta 1 - %s - %d\n", cidade1, populacao1);
+        printf("Resultado: Carta 1 (%s) venceu!\n", cidade2);
+    }
 
     return 0;
 }
