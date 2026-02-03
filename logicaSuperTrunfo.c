@@ -47,7 +47,7 @@ int main() {
     scanf("%f", &pib2);
     printf("Digite a quantidade de pontos turísticos: ");
     scanf("%d", &pontosT2);
-    printf("---------------------------------\n");
+    printf("---------------------------------\n\n");
 
     // Área para o cálculo de Densidade Populacional e PIB per Capita (conversão explicita)
     float densidade1 = (float) populacao1 / area1; 
@@ -58,7 +58,7 @@ int main() {
 
     // Comparação de Cartas:
     // lógica de comparação entre duas cartas.
-    printf("--------- X Combate X ---------\n");
+    printf("---------- X Combate X ----------\n\n");
 
     if (populacao1 > populacao2) {
         printf("Atributo - POPULAÇÃO\n");
@@ -69,8 +69,21 @@ int main() {
         printf("Atributo - POPULAÇÃO\n");
         printf("Carta 2 - %s - %d\n", cidade2, populacao2);
         printf("Carta 1 - %s - %d\n", cidade1, populacao1);
-        printf("Resultado: Carta 1 (%s) venceu!\n", cidade2);
+        printf("Resultado: Carta 2 (%s) venceu!\n\n", cidade2);
     }
+
+    if (densidade1 < densidade2) {
+        printf("Atributo - DENSIDADE POPULACIONAL\n");
+        printf("Carta 1 - %s - %.2f\n", cidade1, densidade1);
+        printf("Carta 2 - %s - %.2f\n", cidade2, densidade2);
+        printf("Resultado: Carta 1 (%s) venceu!\n", cidade1);
+    } else {
+        printf("Atributo - DENSIDADE POPULACIONAL\n");
+        printf("Carta 2 - %s - %d\n", cidade2, densidade2);
+        printf("Carta 1 - %s - %d\n", cidade1, densidade1);
+        printf("Resultado: Carta 2 (%s) venceu!\n\n", cidade2);
+    }
+
 
     return 0;
 }
